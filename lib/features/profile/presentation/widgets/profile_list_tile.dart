@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:unaago/core/constants/colors.dart';
 
-class   extends StatelessWidget {
+class ProfileListTile extends StatelessWidget {
   final String? leading;
   final String? title;
   final String? subtitle;
   final String? trailing;
   final VoidCallback? onTap;
+
   const ProfileListTile({
     super.key,
     this.leading,
