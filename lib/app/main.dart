@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
 import 'package:unaago/features/splash/presentation/screens/splash_screen.dart';
 
@@ -17,11 +20,24 @@ class MainApp extends StatelessWidget {
         BlocProvider<SplashCubit>(
           create: (context) => SplashCubit()..startSplash(),
         ),
+        BlocProvider<AuthCubit>(
+          create: (context) => AuthCubit(),
+        ),
       ],
 
       child: const MaterialApp(
         home: SplashScreen(),
         debugShowCheckedModeBanner: false,
+        localizationsDelegates: [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: [
+          Locale('ru'),
+          Locale('en'),
+        ],
       ),
     );
   }

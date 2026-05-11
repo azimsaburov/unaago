@@ -1,0 +1,3 @@
+arb-dir: assets/i10n
+template-arb-file: app_ru.arb
+output-class: AppLocalizations

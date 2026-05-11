@@ -1,0 +1,23 @@
+{
+  "@@locale": "en",
+  "appTitle": "UnaaGo",
+  "home": "Home",
+  "locations": "Locations",
+  "favorites": "Favorites",
+  "profile": "Profile",
+  "carBrand": "Brand",
+  "carModel": "Model",
+  "pricePerDay": "Price per day",
+  "rentNow": "Rent Now",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "name": "Name",
+  "selectRole": "Select Role",
+  "roleRenter": "Renter",
+  "roleOwner": "Individual Owner",
+  "roleCompany": "Company",
+  "noAccount": "No account? Register",
+  "haveAccount": "Already have an account? Login"
+}

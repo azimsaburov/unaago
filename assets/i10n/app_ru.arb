@@ -1,0 +1,23 @@
+{
+  "@@locale": "ru",
+  "appTitle": "UnaaGo",
+  "home": "Главная",
+  "locations": "Локации",
+  "favorites": "Избранные",
+  "profile": "Профиль",
+  "carBrand": "Марка",
+  "carModel": "Модель",
+  "pricePerDay": "Цена в сутки",
+  "rentNow": "Арендовать",
+  "login": "Вход",
+  "register": "Регистрация",
+  "email": "Электронная почта",
+  "password": "Пароль",
+  "name": "Имя",
+  "selectRole": "Выберите роль",
+  "roleRenter": "Арендатор",
+  "roleOwner": "Частный владелец",
+  "roleCompany": "Компания",
+  "noAccount": "Нет аккаунта? Зарегистрироваться",
+  "haveAccount": "Уже есть аккаунт? Войти"
+}
