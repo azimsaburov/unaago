@@ -24,10 +24,10 @@ class ProfileListTile extends StatelessWidget {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: ListTile(
-        leading: Text(leading ?? ''),
-        title: Text(leading ?? ''),
-        subtitle: Text(leading ?? ''),
-        trailing:  Text(leading ?? ''),
+        leading: leading != null ? Text(leading!) : null,
+        title: title != null ? Text(title!) : null,
+        subtitle: subtitle != null ? Text(subtitle!) : null,
+        trailing: trailing != null ? Text(trailing!) : null,
         onTap: onTap,
       ),
     );
