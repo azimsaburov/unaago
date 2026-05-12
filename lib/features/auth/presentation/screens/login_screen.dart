@@ -32,8 +32,9 @@ class _LoginScreenState extends State<LoginScreen> {
       body: BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state is Authenticated) {
-            Navigator.of(context).pushReplacement(
+            Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(builder: (context) => const Navig()),
+              (route) => false,
             );
           }
           if (state is AuthError) {

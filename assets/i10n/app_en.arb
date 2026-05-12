@@ -19,5 +19,21 @@
   "roleOwner": "Individual Owner",
   "roleCompany": "Company",
   "noAccount": "No account? Register",
-  "haveAccount": "Already have an account? Login"
+  "haveAccount": "Already have an account? Login",
+  "addCar": "Add Car",
+  "myCars": "My Cars",
+  "year": "Year",
+  "description": "Description",
+  "transmission": "Transmission",
+  "fuelType": "Fuel Type",
+  "manual": "Manual",
+  "automatic": "Automatic",
+  "petrol": "Petrol",
+  "diesel": "Diesel",
+  "electric": "Electric",
+  "hybrid": "Hybrid",
+  "save": "Save",
+  "emptyCarsList": "You don't have any cars added yet",
+  "settings": "Settings",
+  "logout": "Logout"
 }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
+import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
 import 'package:unaago/features/splash/presentation/screens/splash_screen.dart';
 
@@ -22,6 +23,9 @@ class MainApp extends StatelessWidget {
         ),
         BlocProvider<AuthCubit>(
           create: (context) => AuthCubit(),
+        ),
+        BlocProvider<CarCubit>(
+          create: (context) => CarCubit(),
         ),
       ],
 
