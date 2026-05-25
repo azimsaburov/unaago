@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unaago/features/auth/logic/auth_cubit.dart';
+import 'package:unaago/features/auth/logic/auth_state.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_state.dart';
 import 'package:unaago/features/car_management/presentation/screens/add_car_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class MyCarsScreen extends StatelessWidget {
+class MyCarsScreen extends StatefulWidget {
   const MyCarsScreen({super.key});
+
+  @override
+  State<MyCarsScreen> createState() => _MyCarsScreenState();
+}
+
+class _MyCarsScreenState extends State<MyCarsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    final authState = context.read<AuthCubit>().state;
+    if (authState is Authenticated) {
+      context.read<CarCubit>().getMyCars(authState.user.id);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +31,6 @@ class MyCarsScreen extends StatelessWidget {
       appBar: AppBar(title: Text(l10n.myCars)),
       body: BlocBuilder<CarCubit, CarState>(
         builder: (context, state) {
-          if (state is CarInitial) {
-            final authState = context.read<AuthCubit>().state;
-            if (authState is Authenticated) {
-              context.read<CarCubit>().getMyCars(authState.user.id);
-            }
-            return const Center(child: CircularProgressIndicator());
-          }
           if (state is CarLoading) {
             return const Center(child: CircularProgressIndicator());
           }
@@ -41,7 +50,7 @@ class MyCarsScreen extends StatelessWidget {
               },
             );
           }
-          return const SizedBox();
+          return const Center(child: CircularProgressIndicator());
         },
       ),
       floatingActionButton: FloatingActionButton(
