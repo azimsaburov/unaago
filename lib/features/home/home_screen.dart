@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_state.dart';
 import 'package:unaago/features/marketplace/presentation/screens/car_details_screen.dart';
 import 'package:unaago/features/marketplace/presentation/widgets/car_card.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:unaago/core/common/widgets.dart';
 import 'package:unaago/core/constants/colors.dart';
+import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/core/models/car_model.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CarDetailsScreen extends StatelessWidget {
   final CarModel car;

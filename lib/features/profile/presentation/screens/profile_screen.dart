@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
 import 'package:unaago/features/car_management/presentation/screens/my_cars_screen.dart';
 import 'package:unaago/features/profile/presentation/widgets/profile_list_tile.dart';
 import 'package:unaago/core/models/user_model.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
