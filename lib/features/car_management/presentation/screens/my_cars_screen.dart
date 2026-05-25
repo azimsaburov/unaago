@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_state.dart';
 import 'package:unaago/features/car_management/presentation/screens/add_car_screen.dart';
+import 'package:unaago/core/localization/app_localizations.dart';
 
 class MyCarsScreen extends StatefulWidget {
   const MyCarsScreen({super.key});

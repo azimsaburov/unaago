@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/core/common/widgets.dart';
-import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
 import 'package:unaago/features/auth/presentation/screens/register_screen.dart';
 import 'package:unaago/app/navigation/navig.dart';
+import 'package:unaago/core/localization/app_localizations.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/app/navigation/navig.dart';
 import 'package:unaago/core/common/widgets.dart';
-import 'package:unaago/core/loacalization/app_localizations.dart';
 import 'package:unaago/core/models/user_model.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
+import 'package:unaago/core/localization/app_localizations.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

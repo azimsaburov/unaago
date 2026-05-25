@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:unaago/core/loacalization/app_localizations.dart';
+import 'package:unaago/core/localization/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
@@ -29,8 +29,8 @@ class MainApp extends StatelessWidget {
         ),
       ],
 
-      child: MaterialApp(
-        home: const SplashScreen(),
+      child: const MaterialApp(
+        home: SplashScreen(),
         debugShowCheckedModeBanner: false,
         localizationsDelegates: [
           AppLocalizations.delegate,
@@ -38,7 +38,7 @@ class MainApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        supportedLocales: const [
+        supportedLocales: [
           Locale('ru'),
           Locale('en'),
         ],
