@@ -151,4 +151,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get endDate => 'End Date';
+
+  @override
+  String get subscriptions => 'Subscriptions';
+
+  @override
+  String get selectPlan => 'Select a Plan';
+
+  @override
+  String get monthly => 'per month';
+
+  @override
+  String get unlimitedCars => 'Unlimited Cars';
+
+  @override
+  String get support => '24/7 Support';
+
+  @override
+  String get buyNow => 'Buy Subscription';
+
+  @override
+  String get activeSubscriptionRequired =>
+      'Active subscription required to add a car';
+
+  @override
+  String get payment => 'Payment';
+
+  @override
+  String get cardNumber => 'Card Number';
+
+  @override
+  String get expiryDate => 'Expiry Date';
+
+  @override
+  String get pay => 'Pay';
 }

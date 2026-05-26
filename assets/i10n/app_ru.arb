@@ -47,5 +47,16 @@
   "bookingSuccess": "Автомобиль успешно забронирован!",
   "myBookings": "Мои бронирования",
   "startDate": "Дата начала",
-  "endDate": "Дата окончания"
+  "endDate": "Дата окончания",
+  "subscriptions": "Подписки",
+  "selectPlan": "Выберите тарифный план",
+  "monthly": "в месяц",
+  "unlimitedCars": "Безлимитно авто",
+  "support": "Поддержка 24/7",
+  "buyNow": "Купить подписку",
+  "activeSubscriptionRequired": "Для добавления авто необходима активная подписка",
+  "payment": "Оплата",
+  "cardNumber": "Номер карты",
+  "expiryDate": "Срок действия",
+  "pay": "Оплатить"
 }

@@ -385,6 +385,72 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Дата окончания'**
   String get endDate;
+
+  /// No description provided for @subscriptions.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подписки'**
+  String get subscriptions;
+
+  /// No description provided for @selectPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите тарифный план'**
+  String get selectPlan;
+
+  /// No description provided for @monthly.
+  ///
+  /// In ru, this message translates to:
+  /// **'в месяц'**
+  String get monthly;
+
+  /// No description provided for @unlimitedCars.
+  ///
+  /// In ru, this message translates to:
+  /// **'Безлимитно авто'**
+  String get unlimitedCars;
+
+  /// No description provided for @support.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поддержка 24/7'**
+  String get support;
+
+  /// No description provided for @buyNow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Купить подписку'**
+  String get buyNow;
+
+  /// No description provided for @activeSubscriptionRequired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для добавления авто необходима активная подписка'**
+  String get activeSubscriptionRequired;
+
+  /// No description provided for @payment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оплата'**
+  String get payment;
+
+  /// No description provided for @cardNumber.
+  ///
+  /// In ru, this message translates to:
+  /// **'Номер карты'**
+  String get cardNumber;
+
+  /// No description provided for @expiryDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок действия'**
+  String get expiryDate;
+
+  /// No description provided for @pay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оплатить'**
+  String get pay;
 }
 
 class _AppLocalizationsDelegate

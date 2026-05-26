@@ -4,6 +4,8 @@ import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_state.dart';
+import 'package:unaago/features/subscriptions/logic/subscription_cubit.dart';
+import 'package:unaago/features/subscriptions/presentation/screens/subscription_screen.dart';
 import 'package:unaago/features/car_management/presentation/screens/add_car_screen.dart';
 import 'package:unaago/core/localization/app_localizations.dart';
 
@@ -55,9 +57,19 @@ class _MyCarsScreenState extends State<MyCarsScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const AddCarScreen()),
-          );
+          final subState = context.read<SubscriptionCubit>().state;
+          if (subState is SubscriptionActive) {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const AddCarScreen()),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(l10n.activeSubscriptionRequired)),
+            );
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const SubscriptionScreen()),
+            );
+          }
         },
         child: const Icon(Icons.add),
       ),

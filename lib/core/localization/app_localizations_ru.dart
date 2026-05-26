@@ -151,4 +151,38 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get endDate => 'Дата окончания';
+
+  @override
+  String get subscriptions => 'Подписки';
+
+  @override
+  String get selectPlan => 'Выберите тарифный план';
+
+  @override
+  String get monthly => 'в месяц';
+
+  @override
+  String get unlimitedCars => 'Безлимитно авто';
+
+  @override
+  String get support => 'Поддержка 24/7';
+
+  @override
+  String get buyNow => 'Купить подписку';
+
+  @override
+  String get activeSubscriptionRequired =>
+      'Для добавления авто необходима активная подписка';
+
+  @override
+  String get payment => 'Оплата';
+
+  @override
+  String get cardNumber => 'Номер карты';
+
+  @override
+  String get expiryDate => 'Срок действия';
+
+  @override
+  String get pay => 'Оплатить';
 }

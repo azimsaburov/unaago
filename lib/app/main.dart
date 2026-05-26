@@ -5,6 +5,7 @@ import 'package:unaago/core/localization/app_localizations.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/bookings/logic/booking_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
+import 'package:unaago/features/subscriptions/logic/subscription_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
 import 'package:unaago/features/splash/presentation/screens/splash_screen.dart';
 
@@ -30,6 +31,9 @@ class MainApp extends StatelessWidget {
         ),
         BlocProvider<BookingCubit>(
           create: (context) => BookingCubit(),
+        ),
+        BlocProvider<SubscriptionCubit>(
+          create: (context) => SubscriptionCubit(),
         ),
       ],
 

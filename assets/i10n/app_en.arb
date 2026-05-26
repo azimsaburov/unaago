@@ -47,5 +47,16 @@
   "bookingSuccess": "Car booked successfully!",
   "myBookings": "My Bookings",
   "startDate": "Start Date",
-  "endDate": "End Date"
+  "endDate": "End Date",
+  "subscriptions": "Subscriptions",
+  "selectPlan": "Select a Plan",
+  "monthly": "per month",
+  "unlimitedCars": "Unlimited Cars",
+  "support": "24/7 Support",
+  "buyNow": "Buy Subscription",
+  "activeSubscriptionRequired": "Active subscription required to add a car",
+  "payment": "Payment",
+  "cardNumber": "Card Number",
+  "expiryDate": "Expiry Date",
+  "pay": "Pay"
 }
