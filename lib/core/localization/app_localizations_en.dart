@@ -133,4 +133,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bookNow => 'Book Now';
+
+  @override
+  String get selectDates => 'Select Dates';
+
+  @override
+  String get totalPrice => 'Total Price';
+
+  @override
+  String get bookingSuccess => 'Car booked successfully!';
+
+  @override
+  String get myBookings => 'My Bookings';
+
+  @override
+  String get startDate => 'Start Date';
+
+  @override
+  String get endDate => 'End Date';
 }

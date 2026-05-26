@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/features/auth/logic/auth_cubit.dart';
 import 'package:unaago/features/auth/logic/auth_state.dart';
+import 'package:unaago/features/bookings/presentation/screens/my_bookings_screen.dart';
 import 'package:unaago/features/car_management/presentation/screens/my_cars_screen.dart';
 import 'package:unaago/features/profile/presentation/widgets/profile_list_tile.dart';
 import 'package:unaago/core/models/user_model.dart';
@@ -39,6 +40,15 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                 ],
+                ProfileListTile(
+                  leading: '📅',
+                  title: l10n.myBookings,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const MyBookingsScreen()),
+                    );
+                  },
+                ),
                 if (isOwner)
                   ProfileListTile(
                     leading: '🚗',

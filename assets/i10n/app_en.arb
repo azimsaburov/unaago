@@ -41,5 +41,11 @@
   "allCars": "All Cars",
   "details": "Details",
   "perDay": "/ day",
-  "bookNow": "Book Now"
+  "bookNow": "Book Now",
+  "selectDates": "Select Dates",
+  "totalPrice": "Total Price",
+  "bookingSuccess": "Car booked successfully!",
+  "myBookings": "My Bookings",
+  "startDate": "Start Date",
+  "endDate": "End Date"
 }

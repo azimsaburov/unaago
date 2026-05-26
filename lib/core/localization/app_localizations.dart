@@ -18,7 +18,7 @@ import 'app_localizations_ru.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'i10n/app_localizations.dart';
+/// import 'localization/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -349,6 +349,42 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Забронировать'**
   String get bookNow;
+
+  /// No description provided for @selectDates.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выбрать даты'**
+  String get selectDates;
+
+  /// No description provided for @totalPrice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итоговая стоимость'**
+  String get totalPrice;
+
+  /// No description provided for @bookingSuccess.
+  ///
+  /// In ru, this message translates to:
+  /// **'Автомобиль успешно забронирован!'**
+  String get bookingSuccess;
+
+  /// No description provided for @myBookings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мои бронирования'**
+  String get myBookings;
+
+  /// No description provided for @startDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дата начала'**
+  String get startDate;
+
+  /// No description provided for @endDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дата окончания'**
+  String get endDate;
 }
 
 class _AppLocalizationsDelegate

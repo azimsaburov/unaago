@@ -133,4 +133,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get bookNow => 'Забронировать';
+
+  @override
+  String get selectDates => 'Выбрать даты';
+
+  @override
+  String get totalPrice => 'Итоговая стоимость';
+
+  @override
+  String get bookingSuccess => 'Автомобиль успешно забронирован!';
+
+  @override
+  String get myBookings => 'Мои бронирования';
+
+  @override
+  String get startDate => 'Дата начала';
+
+  @override
+  String get endDate => 'Дата окончания';
 }
