@@ -58,5 +58,9 @@
   "payment": "Payment",
   "cardNumber": "Card Number",
   "expiryDate": "Expiry Date",
-  "pay": "Pay"
+  "pay": "Pay",
+  "addToFavorites": "Add to favorites",
+  "removedFromFavorites": "Removed from favorites",
+  "noFavorites": "No favorites yet",
+  "map": "Map"
 }

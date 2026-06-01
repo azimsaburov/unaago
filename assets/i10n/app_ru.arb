@@ -58,5 +58,9 @@
   "payment": "Оплата",
   "cardNumber": "Номер карты",
   "expiryDate": "Срок действия",
-  "pay": "Оплатить"
+  "pay": "Оплатить",
+  "addToFavorites": "Добавить в избранное",
+  "removedFromFavorites": "Удалено из избранного",
+  "noFavorites": "Список избранного пуст",
+  "map": "Карта"
 }

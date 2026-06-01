@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/core/constants/colors.dart';
 import 'package:unaago/core/models/car_model.dart';
+import 'package:unaago/features/favorite/logic/favorites_cubit.dart';
 import 'package:unaago/core/localization/app_localizations.dart';
 
 class CarCard extends StatelessWidget {
@@ -21,13 +23,36 @@ class CarCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 180,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
-              ),
-              child: const Center(child: Icon(Icons.directions_car, size: 80, color: Colors.grey)),
+            Stack(
+              children: [
+                Container(
+                  height: 180,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                  child: const Center(child: Icon(Icons.directions_car, size: 80, color: Colors.grey)),
+                ),
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: BlocBuilder<FavoritesCubit, List<CarModel>>(
+                    builder: (context, state) {
+                      final isFav = context.read<FavoritesCubit>().isFavorite(car.id);
+                      return CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                          icon: Icon(
+                            isFav ? Icons.favorite : Icons.favorite_border,
+                            color: isFav ? Colors.red : Colors.grey,
+                          ),
+                          onPressed: () => context.read<FavoritesCubit>().toggleFavorite(car),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),

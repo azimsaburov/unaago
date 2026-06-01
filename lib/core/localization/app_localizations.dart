@@ -451,6 +451,30 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Оплатить'**
   String get pay;
+
+  /// No description provided for @addToFavorites.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить в избранное'**
+  String get addToFavorites;
+
+  /// No description provided for @removedFromFavorites.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалено из избранного'**
+  String get removedFromFavorites;
+
+  /// No description provided for @noFavorites.
+  ///
+  /// In ru, this message translates to:
+  /// **'Список избранного пуст'**
+  String get noFavorites;
+
+  /// No description provided for @map.
+  ///
+  /// In ru, this message translates to:
+  /// **'Карта'**
+  String get map;
 }
 
 class _AppLocalizationsDelegate

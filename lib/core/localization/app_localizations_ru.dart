@@ -185,4 +185,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get pay => 'Оплатить';
+
+  @override
+  String get addToFavorites => 'Добавить в избранное';
+
+  @override
+  String get removedFromFavorites => 'Удалено из избранного';
+
+  @override
+  String get noFavorites => 'Список избранного пуст';
+
+  @override
+  String get map => 'Карта';
 }
