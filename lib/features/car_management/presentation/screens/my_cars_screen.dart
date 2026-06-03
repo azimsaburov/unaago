@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unaago/features/auth/logic/auth_cubit.dart';
+import 'package:unaago/features/auth/logic/auth_state.dart';
+import 'package:unaago/features/car_management/logic/car_cubit.dart';
+import 'package:unaago/features/car_management/logic/car_state.dart';
+import 'package:unaago/features/subscriptions/logic/subscription_cubit.dart';
+import 'package:unaago/features/subscriptions/presentation/screens/subscription_screen.dart';
+import 'package:unaago/features/car_management/presentation/screens/add_car_screen.dart';
+import 'package:unaago/core/localization/app_localizations.dart';
+
+class MyCarsScreen extends StatefulWidget {
+  const MyCarsScreen({super.key});
+
+  @override
+  State<MyCarsScreen> createState() => _MyCarsScreenState();
+}
+
+class _MyCarsScreenState extends State<MyCarsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    final authState = context.read<AuthCubit>().state;
+    if (authState is Authenticated) {
+      context.read<CarCubit>().getMyCars(authState.user.id);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Scaffold(
+      appBar: AppBar(title: Text(l10n.myCars)),
+      body: BlocBuilder<CarCubit, CarState>(
+        builder: (context, state) {
+          if (state is CarLoading) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (state is CarsLoaded) {
+            if (state.cars.isEmpty) {
+              return Center(child: Text(l10n.emptyCarsList));
+            }
+            return ListView.builder(
+              itemCount: state.cars.length,
+              itemBuilder: (context, index) {
+                final car = state.cars[index];
+                return ListTile(
+                  title: Text('${car.brand} ${car.model}'),
+                  subtitle: Text('${car.pricePerDay} / day'),
+                  trailing: const Icon(Icons.edit),
+                );
+              },
+            );
+          }
+          return const Center(child: CircularProgressIndicator());
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          final subState = context.read<SubscriptionCubit>().state;
+          if (subState is SubscriptionActive) {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const AddCarScreen()),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(l10n.activeSubscriptionRequired)),
+            );
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const SubscriptionScreen()),
+            );
+          }
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}

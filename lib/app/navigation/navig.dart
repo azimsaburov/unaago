@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/core/constants/colors.dart';
+import 'package:unaago/features/auth/logic/auth_cubit.dart';
+import 'package:unaago/features/auth/logic/auth_state.dart';
+import 'package:unaago/features/auth/presentation/screens/login_screen.dart';
 import 'package:unaago/features/favorite/favorite_screen.dart';
 import 'package:unaago/features/home/home_screen.dart';
 import 'package:unaago/features/location/location_screen.dart';
@@ -26,11 +30,21 @@ class _NavigState extends State<Navig> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _activePage,
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(left: 12, right: 12, bottom: 16),
-        child: _buildNavig(),
+    return BlocListener<AuthCubit, AuthState>(
+      listener: (context, state) {
+        if (state is Unauthenticated) {
+          Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (context) => const LoginScreen()),
+            (route) => false,
+          );
+        }
+      },
+      child: Scaffold(
+        body: _activePage,
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.only(left: 12, right: 12, bottom: 16),
+          child: _buildNavig(),
+        ),
       ),
     );
   }

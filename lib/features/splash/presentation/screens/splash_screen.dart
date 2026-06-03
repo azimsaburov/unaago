@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/core/constants/colors.dart';
 import 'package:unaago/core/constants/images_paths.dart';
-import 'package:unaago/app/navigation/navig.dart';
+import 'package:unaago/features/auth/presentation/screens/login_screen.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_state.dart';
 
@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
         listener: (context, state) {
           if (state is SplashSuccess) {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => Navig()),
+              MaterialPageRoute(builder: (context) => const LoginScreen()),
             );
           }
           if (state is SplashError) {
