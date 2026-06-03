@@ -475,6 +475,36 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Карта'**
   String get map;
+
+  /// No description provided for @reviews.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отзывы'**
+  String get reviews;
+
+  /// No description provided for @leaveReview.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оставить отзыв'**
+  String get leaveReview;
+
+  /// No description provided for @rating.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рейтинг'**
+  String get rating;
+
+  /// No description provided for @noReviews.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отзывов пока нет'**
+  String get noReviews;
+
+  /// No description provided for @writeComment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напишите ваш комментарий'**
+  String get writeComment;
 }
 
 class _AppLocalizationsDelegate

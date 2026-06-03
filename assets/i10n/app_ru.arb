@@ -62,5 +62,10 @@
   "addToFavorites": "Добавить в избранное",
   "removedFromFavorites": "Удалено из избранного",
   "noFavorites": "Список избранного пуст",
-  "map": "Карта"
+  "map": "Карта",
+  "reviews": "Отзывы",
+  "leaveReview": "Оставить отзыв",
+  "rating": "Рейтинг",
+  "noReviews": "Отзывов пока нет",
+  "writeComment": "Напишите ваш комментарий"
 }

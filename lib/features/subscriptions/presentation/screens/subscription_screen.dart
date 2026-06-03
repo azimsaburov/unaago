@@ -22,7 +22,7 @@ class SubscriptionScreen extends StatelessWidget {
             _buildPlanCard(
               context,
               title: 'Pro',
-              price: '49$',
+              price: '49\$',
               features: ['5 авто', l10n.support],
               color: ColorsConstants.primary,
             ),
@@ -30,7 +30,7 @@ class SubscriptionScreen extends StatelessWidget {
             _buildPlanCard(
               context,
               title: 'Business',
-              price: '149$',
+              price: '149\$',
               features: [l10n.unlimitedCars, l10n.support],
               color: ColorsConstants.secondary,
             ),

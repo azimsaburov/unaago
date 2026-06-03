@@ -62,5 +62,10 @@
   "addToFavorites": "Add to favorites",
   "removedFromFavorites": "Removed from favorites",
   "noFavorites": "No favorites yet",
-  "map": "Map"
+  "map": "Map",
+  "reviews": "Reviews",
+  "leaveReview": "Leave a review",
+  "rating": "Rating",
+  "noReviews": "No reviews yet",
+  "writeComment": "Write your comment"
 }

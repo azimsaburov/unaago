@@ -197,4 +197,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get map => 'Map';
+
+  @override
+  String get reviews => 'Reviews';
+
+  @override
+  String get leaveReview => 'Leave a review';
+
+  @override
+  String get rating => 'Rating';
+
+  @override
+  String get noReviews => 'No reviews yet';
+
+  @override
+  String get writeComment => 'Write your comment';
 }

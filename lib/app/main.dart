@@ -7,6 +7,7 @@ import 'package:unaago/features/bookings/logic/booking_cubit.dart';
 import 'package:unaago/features/car_management/logic/car_cubit.dart';
 import 'package:unaago/features/subscriptions/logic/subscription_cubit.dart';
 import 'package:unaago/features/favorite/logic/favorites_cubit.dart';
+import 'package:unaago/features/reviews/logic/review_cubit.dart';
 import 'package:unaago/features/splash/cubit/splash_cubit.dart';
 import 'package:unaago/features/splash/presentation/screens/splash_screen.dart';
 
@@ -38,6 +39,9 @@ class MainApp extends StatelessWidget {
         ),
         BlocProvider<FavoritesCubit>(
           create: (context) => FavoritesCubit(),
+        ),
+        BlocProvider<ReviewCubit>(
+          create: (context) => ReviewCubit(),
         ),
       ],
 

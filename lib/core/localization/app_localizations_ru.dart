@@ -197,4 +197,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get map => 'Карта';
+
+  @override
+  String get reviews => 'Отзывы';
+
+  @override
+  String get leaveReview => 'Оставить отзыв';
+
+  @override
+  String get rating => 'Рейтинг';
+
+  @override
+  String get noReviews => 'Отзывов пока нет';
+
+  @override
+  String get writeComment => 'Напишите ваш комментарий';
 }

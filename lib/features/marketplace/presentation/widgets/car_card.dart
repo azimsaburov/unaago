@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unaago/core/constants/colors.dart';
 import 'package:unaago/core/models/car_model.dart';
 import 'package:unaago/features/favorite/logic/favorites_cubit.dart';
+import 'package:unaago/features/reviews/logic/review_cubit.dart';
 import 'package:unaago/core/localization/app_localizations.dart';
 
 class CarCard extends StatelessWidget {
@@ -66,7 +67,18 @@ class CarCard extends StatelessWidget {
                         '${car.brand} ${car.model}',
                         style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      Text(car.transmission, style: const TextStyle(color: Colors.grey)),
+                      Row(
+                        children: [
+                          const Icon(Icons.star, color: Colors.orange, size: 16),
+                          const SizedBox(width: 4),
+                          Text(
+                            context.read<ReviewCubit>().getAverageRating(car.id).toStringAsFixed(1),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(width: 10),
+                          Text(car.transmission, style: const TextStyle(color: Colors.grey)),
+                        ],
+                      ),
                     ],
                   ),
                   Text(
